@@ -26,16 +26,24 @@ I haven't been able to test this on IE: I believe I've only used things which wi
 work on IE8, or which will not break the page if they don't. The box model may need 
 IE8-specific styles to be added, possibly through an included stylesheet.
 
-I have used jQuery v1 for speed and also for its cross-browserness.
-
 I have used the font Lucida Grande regular and bold in place of SourceSensPro 
 regular and black.
 
-##Next steps:
+The site has not been designed mobile-first - I started with the desktop version and 
+made (small, due to time constraints) changes at narrower viewport widths.
 
-Use JavaScript to open and close the sections accordion-style.
+The layout is still only in a rough version.
 
-When the 'submit offer' button is clicked, the price should validate,  
-display an inline message, and output as an object to the console.
+##Addition of JavaScript
 
-After this, return to fixing the layout and implementing a resposive design.
+I have used jQuery v1 for speed and also for cross-browser support (including for IE8).
+
+The sections now open and close accordion-style. I have started with the sections 
+open so that by default all information is displayed. If JavaScript is not enabled 
+the 'hide' commands do not display (not tested).
+
+When the 'submit offer' button is clicked, the price validates against the asking 
+price, displays a message and is output as an object to the console.
+
+Please note: due to time constraints this hasn't been tested in browsers other than 
+Chrome on Mac, and hasn't had proper error handling considered.

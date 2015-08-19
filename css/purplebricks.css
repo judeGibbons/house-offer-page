@@ -59,17 +59,18 @@ table {
 	text-align: right;
 	line-height: 120px;
 	margin-bottom: 45px;
+	box-shadow: 0px 4px 4px #ccc;
 }
 
 
-h1, #mainContent {
+h1, #mainContent, #footer ul {
 	max-width: 900px;
 	margin: 0 auto;
 }
 
 .section.buyersOffer, .section.response {
-	width: 36%; /*make sure this works down to breakpoint*/
-	max-width: 350px;
+	width: 39%;
+	max-width: 370px;
 }
 
 .section.buyersOffer {
@@ -95,6 +96,8 @@ h1, #mainContent {
     overflow: hidden;
     visibility: hidden;
 }
+
+
 
 
 /* ==== design ==== */
@@ -270,16 +273,40 @@ button#submitButton {
 #footer {
 	color: #ffffff;
 	background-color: #545353;
+	text-transform: uppercase;
+	font-size: 15px;
 }
 
-#footer > ul > li::after {
-	content: '|';
-	margin: 0 10px;
+#footer ul {
+	padding-top: 12px;
 }
 
+#footer > ul > li {
+	border-right: 1px solid #ffffff;
+	padding: 1px 16px;
+}
 
-#footer > ul > li:last-child::after {
-	content: none;
+#footer > ul > li:first-child {
+	padding-left: 0;
+}
+
+#footer > ul > li:last-child {
+	border-right: none;
+	float: right;
+}
+
+#footer > ul > li:last-child > ul {
+	position: relative;
+	top: -12px;
+}
+
+#footer > ul > li:last-child > ul > li {
+	margin: 0 8px;
+}
+
+#footer > ul > li:last-child > ul > li:last-child {
+	margin-right: 0;
+	padding-right: 0;
 }
 
 .title, .em {
@@ -331,3 +358,69 @@ h1 span.logo {
 	float: left;
 	width: 50%;
 }
+
+
+
+
+/* ------>>> LESS THAN 960px <<<------ */
+
+@media only screen and (max-width: 960px), only screen and (max-device-width: 960px) {
+
+
+#header, #mainContent, #footer {
+	padding: 0 14px;
+}
+
+.section.buyersOffer, .section.response {
+	width: 38%;
+	max-width: 330px;
+}
+
+
+} /*end of media query max-width 960px */
+
+/* ------>>> LESS THAN 760px <<<------ */
+
+@media only screen and (max-width: 760px), only screen and (max-device-width: 760px) {
+
+
+#mainContent {
+	padding: 0;
+}
+
+.section.buyersOffer, .section.response {
+	width: auto;
+	float: none;
+	max-width: 100%;
+}
+
+.section {
+	border: none;
+	background-color: #eee6f0;
+}
+
+} /*end of media query max-width 760px */
+
+/* ------>>> LESS THAN 520px <<<------ */
+
+@media only screen and (max-width: 520px), only screen and (max-device-width: 520px) {
+
+
+h1 {
+    width: 50%;
+    line-height: 1em;
+    position: absolute;
+    top: 30px;
+    right: 26px;
+}
+
+h1 span.logo {
+    position: absolute;
+    margin-left: -228px;
+    top: -30px;
+}
+
+} /*end of media query max-width 520px */
+
+
+
