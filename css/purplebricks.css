@@ -159,11 +159,9 @@ button {
     text-transform: uppercase;
 }
 
-
 button.view {
     background-color: #aaaaaa;
 }
-
 
 button.interact {
     background-color: #990099;
@@ -188,7 +186,7 @@ body {
 	/*line-height: 1.5em;*/
 }
 
-h1, h2 {
+h1, h2, #validationMessage {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
 	font-weight: bold;
 	color: #550066;
@@ -274,20 +272,14 @@ button#submitButton {
 	background-color: #545353;
 }
 
-#footer li::after {
+#footer > ul > li::after {
 	content: '|';
 	margin: 0 10px;
 }
 
 
-
-
-
-/* ==== form elements ==== */
-
-#submitOffer input[type=text] {
-	margin-bottom: 0.4em;
-	width: 30%;
+#footer > ul > li:last-child::after {
+	content: none;
 }
 
 .title, .em {
@@ -297,6 +289,15 @@ button#submitButton {
 .strong {
 	font-style: bold;
 }
+
+
+/* ==== form elements ==== */
+
+#submitOffer input[type=text] {
+	margin-bottom: 0.4em;
+	width: 30%;
+}
+
 
 
 

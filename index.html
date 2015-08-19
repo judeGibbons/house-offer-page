@@ -30,7 +30,7 @@
         <div class="image"><img src="./graphics/house.jpg" alt="Eddington House, Tamworth" /></div>
         <p class="address">Eddington House, 16 Wigginton Road, Tamworth, B79 8PB</p>
         <div class="details">
-          <p>Asking price: <span class="price">&#163;189,950</span></p>
+          <p>Asking price: <span class="price" id="askingPrice">&#163;189,950</span></p>
           <button class="view extras">View extras included</button>
         </div>
       </div>
@@ -97,14 +97,14 @@
 
         <form action="#" method="post" name="submitOffer" id="submitOffer">
 
-          <label for="offer">Enter an offer you would be willing to accept:</label>
+          <label for="offerPrice">Enter an offer you would be willing to accept:</label>
           <p>&#163;</p>
-          <input type="text" name="offer" id="offer" class="price" />
-          <button class="interact">Add comments</button>
-
+          <input type="text" name="offerPrice" id="offerPrice" class="price" />
           <button type="submit" name="submitButton" id="submitButton">Submit offer</button>
 
         </form>
+        <button class="interact">Add comments</button>
+        <p id="validationMessage"></p>
       </div>
 
     </div>
