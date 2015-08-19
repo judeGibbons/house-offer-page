@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote::before, blockquote::after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ==== end of reset ==== */
+
+
+
+
+/* ==== main content and layout ==== */
+
+#header {
+	height: 102px;
+	text-align: right;
+	line-height: 120px;
+	margin-bottom: 45px;
+}
+
+
+h1, #mainContent {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.section.buyersOffer, .section.response {
+	width: 36%; /*make sure this works down to breakpoint*/
+	max-width: 350px;
+}
+
+.section.buyersOffer {
+	float: left;
+}
+
+.section.response {
+	float: right;
+}
+
+#footer {
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	clear: both;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+/* ==== design ==== */
+
+#header {
+	background-color: #f1f2f2;
+}
+
+.section {
+	border: 1px solid #a5a5a5;
+	margin-bottom: 24px;
+	padding: 24px 40px;
+}
+
+.section.property, .section.reopenNegotiations {
+	border: 2px solid #990099;
+}
+
+.section.response {
+	border: 2px solid #ed1c24;
+}
+
+form {
+	padding: 20px;
+}
+
+button {
+    width: auto;
+    font-size: 17px;
+    border-radius: 4px;
+    border: 0;
+    padding: 4px 8px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
+button.view {
+    background-color: #aaaaaa;
+}
+
+
+button.interact {
+    background-color: #990099;
+}
+
+button#submitButton {
+    background-color: #00aeef;
+}
+
+#footer li {
+	float: left;
+}
+
+
+
+
+
+/* ==== type ==== */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	/*line-height: 1.5em;*/
+}
+
+h1, h2 {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	font-weight: bold;
+	color: #550066;
+	font-size: 22px;
+}
+
+h1 {
+	line-height: 138px;
+}
+
+.logo {
+	line-height: 100px;
+}
+
+h2 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #a5a5a5;
+	margin-bottom: 10px;
+}
+
+h2.status {
+	background-color: #ed1c24;
+	padding: 10px 10px 10px 40px;
+	color: #ffffff;
+	margin-bottom: 10px;
+	border-bottom: none;
+}
+
+h2.status span {
+	font-weight: normal;
+}
+
+/*
+.price::before {
+	content: '&#163;';
+}
+*/
+
+.property .details {
+	float: right;
+	text-align: right;
+}
+
+.property .address {
+	font-weight: bold;
+	font-size: 1em;
+	color: #550066;
+}
+
+.property .details {
+	font-size: 0.5em;
+}
+
+.property span.price {
+	display: block;
+	color: purple;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+.buyersDetails td:first-child {
+	color: #550066;
+	padding-right: 10px;
+}
+
+.response, .response h2 {
+	color: #ed1c24;
+	background-color: #e8e8e8;
+}
+
+button.extras {
+	font-size: 15px;
+}
+
+button#submitButton {
+    font-size: 22px;
+}
+
+
+#footer {
+	color: #ffffff;
+	background-color: #545353;
+}
+
+#footer li::after {
+	content: '|';
+	margin: 0 10px;
+}
+
+
+
+
+
+/* ==== form elements ==== */
+
+#submitOffer input[type=text] {
+	margin-bottom: 0.4em;
+	width: 30%;
+}
+
+.title, .em {
+	font-style: italic;
+}
+
+.strong {
+	font-style: bold;
+}
+
+
+
+/* ==== images ==== */
+
+h1 span.logo {
+	float: left;
+}
+
+
+.logo {
+	display: inline-block;
+}
+
+.logo img {
+	width: 100%;
+	height: auto;
+}
+
+
+
+.property .image {
+	width: 120px;
+	height: 80px;
+	border-radius: 2px;
+	float: left;
+	margin-right: 10px;
+}
+
+.property .address {
+	float: left;
+	width: 50%;
+}
