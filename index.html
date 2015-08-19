@@ -7,14 +7,14 @@
 
   <title>Purplebricks test</title>
 
-  <script type="text/javascript" src="js/purplebricks.js"></script>
   <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="js/purplebricks.js"></script>
 
 </head>
 
 
 
-<body>
+<body class="no-js">
 
   <div id="header">
     <h1><span class="logo"><img src="./graphics/ezie-logo.png" alt="Welcome to the Ezie system"></span>Secure negotiation centre</h1>
@@ -25,37 +25,41 @@
     <h2 class="status">Status: <span>Withdrawn</span></h2>
 
     <div class="section property clearfix">
-      <h2>The property</h2>
-      <div class="image"><img src="./graphics/house.jpg" alt="Eddington House, Tamworth" /></div>
-      <p class="address">Eddington House, 16 Wigginton Road, Tamworth, B79 8PB</p>
-      <div class="details">
-        <p>Asking price: <span class="price">&#163;189,950</span></p>
-        <button class="view extras">View extras included</button>
+      <h2>The property<span class="toggle">hide<span class="arrow"></span></span></h2>
+        <div class="toggledContent">
+        <div class="image"><img src="./graphics/house.jpg" alt="Eddington House, Tamworth" /></div>
+        <p class="address">Eddington House, 16 Wigginton Road, Tamworth, B79 8PB</p>
+        <div class="details">
+          <p>Asking price: <span class="price">&#163;189,950</span></p>
+          <button class="view extras">View extras included</button>
+        </div>
       </div>
     </div>
 
     <div class="section buyersDetails">
-      <h2>Buyer&#8217;s details<span class="hide">hide</span></h2>
-      <table>
-        <tbody>
-          <tr>
-            <td>Name:</td>
-            <td>Mr David Shepherd</td>
-          </tr>
-          <tr>
-            <td>Buying position:</td>
-            <td>Property to sell - 20 weeks on the market</td>
-          </tr>
-          <tr>
-            <td>Financial position:</td>
-            <td>Mortgage required - approved</td>
-          </tr>
-          <tr>
-            <td>Timescale:</td>
-            <td>Would like to move in 10 weeks - no chain</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Buyer&#8217;s details<span class="toggle">hide<span class="arrow"></span></span></h2>
+      <div class="toggledContent">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td>Mr David Shepherd</td>
+            </tr>
+            <tr>
+              <td>Buying position:</td>
+              <td>Property to sell - 20 weeks on the market</td>
+            </tr>
+            <tr>
+              <td>Financial position:</td>
+              <td>Mortgage required - approved</td>
+            </tr>
+            <tr>
+              <td>Timescale:</td>
+              <td>Would like to move in 10 weeks - no chain</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
 
@@ -63,39 +67,45 @@
     <div class="clearfix fullwidth">
 
       <div class="section buyersOffer">
-        <h2>Buyer&#8217;s offer</h2>
-        <p><span class="price">&#163;179,000</span></p>
-        <p>Subject to offer qualification by Purplebricks</p>
-        <button class="view">View comments</button>
-        <p><span class="date">Date: 24/10/2013</span><span class="time">Time: 20:17</span></p>
+        <h2>Buyer&#8217;s offer<span class="toggle">hide<span class="arrow"></span></span></h2>
+        <div class="toggledContent">
+          <p><span class="price">&#163;179,000</span></p>
+          <p>Subject to offer qualification by Purplebricks</p>
+          <button class="view">View comments</button>
+          <p><span class="date">Date: 24/10/2013</span><span class="time">Time: 20:17</span></p>
+        </div>
       </div>
 
       <div class="section response">
-        <h2>Your response</h2>
-        <p>You have withdrawn your acceptance of the offer</p>
-        <button class="view">View comments</button>
-        <p><span class="date">Date: 24/10/2013</span><span class="time">Time: 21:05</span></p>
+        <h2>Your response<span class="toggle">hide<span class="arrow"></span></span></h2>
+        <div class="toggledContent">
+          <p>You have withdrawn your acceptance of the offer</p>
+          <button class="view">View comments</button>
+          <p><span class="date">Date: 24/10/2013</span><span class="time">Time: 21:05</span></p>
+        </div>
       </div>
 
     </div>
 
     <div class="section reopenNegotiations">
-      <h2>Re-open negotiations</h2>
-      <div class="negotiate">
-        <p>Would you like your Expert, <span class="name">Robert White</span>, to negotiate on your behalf? It&#8217;s completely free!</p>
-        <button class="interact">Negotiate for me</button>
+      <h2>Re-open negotiations<span class="toggle">hide<span class="arrow"></span></span></h2>
+      <div class="toggledContent">
+        <div class="negotiate">
+          <p>Would you like your Expert, Robert White, to negotiate on your behalf? It&#8217;s completely free!</p>
+          <button class="interact">Negotiate for me</button>
+        </div>
+
+        <form action="#" method="post" name="submitOffer" id="submitOffer">
+
+          <label for="offer">Enter an offer you would be willing to accept:</label>
+          <p>&#163;</p>
+          <input type="text" name="offer" id="offer" class="price" />
+          <button class="interact">Add comments</button>
+
+          <button type="submit" name="submitButton" id="submitButton">Submit offer</button>
+
+        </form>
       </div>
-
-      <form action="" method="post" name="submitOffer" id="submitOffer">
-
-        <label for="offer">Enter an offer you would be willing to accept:</label>
-        <p>&#163;</p>
-        <input type="text" name="offer" id="offer" class="price" />
-        <button class="interact">Add comments</button>
-
-        <button type="submit" name="submitButton" id="submitButton">Submit offer</button>
-
-      </form>
 
     </div>
 
